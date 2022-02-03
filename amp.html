@@ -1,13 +1,25 @@
 <!doctype html>
-<html amp lang="ja">
+<html ⚡>
     <head>
         <meta charset="utf-8">
-        <script async src="https://cdn.ampproject.org/v0.js"></script>
-        <title>codalista web制作HP</title>
-        <link rel="canonical" href="https://www.example.com/amp_page.html">
-        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <title>AMPポートフォリオ</title>
+        <link rel="canonical" href="./regular-html-version.html">
+        <meta name="viewport" content="width=device-width">
+        <script type="application/ld+json">
+        {
+        "@context": "https://islandersweb.com/amp.html",
+        "@type": "NewsArticle",
+        "headline": "Article headline",
+        "image": [
+            "thumbnail1.jpg"
+        ],
+        "datePublished": "2022-01-27T08:00:00+08:00"
+        }
+        </script>
+        <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+        <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
         <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-        <amp-script src="http://example.com/my-script.js" width="300" height="100"></amp-script>
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
         <style amp-custom>
             body{
                 font-family: 'Noto Sans JP', sans-serif;
@@ -115,8 +127,8 @@
                 height: 30px;
                 display: block;
                 position: absolute;
-                top: 6px;
-                left: 10px;
+                top: 11px;
+                left: 16px;
             }
             .header-btn:hover{
                 border-bottom: solid 5px #000;
@@ -131,7 +143,7 @@
                 position: absolute;
                 bottom: 50px;
                 right: 10%;
-                width: 50px;
+                width: 55px;
             }
             .arrow p{
                 font-size: 20px;
@@ -169,7 +181,8 @@
             }
             .name h3{
                 font-size: 40px;
-                padding: 10px;
+                padding: 0px;
+                margin: 0;
             }
             .name{
                 width: 400px;
@@ -178,7 +191,6 @@
                 line-height: 1.5;
                 padding-top: 10px;
                 text-align: center;
-                opacity: 0;
                 width: 50%;
                 line-height: 2;
             }
@@ -211,14 +223,10 @@
             .skill-item-upper img{
                 width: 50%;
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translateY(-50%) translateX(-50%);
             }
             .skill-item-bottom{
                 height: 50%;
                 box-sizing: border-box;
-                padding: 10px;
             }
 
 
@@ -231,6 +239,8 @@
                 line-height: 2;
                 text-align: left;
                 padding: 10px;
+                height: 140px;
+                overflow: scroll;
             }
             /* fadein */
             .scroll-in {
@@ -243,7 +253,7 @@
             #floating{
                 animation: img_box_9955 3s linear infinite;
                 transform-origin: 50% 50%;
-                margin: 1rem 0 !important;
+                margin: 1rem 0;
             }
 
             @keyframes img_box_9955 {
@@ -523,7 +533,25 @@
             .menus_sp_modal .menus_sp_modal_item a:hover{
                 opacity: 0.8;
             }
+            .pc{
+                display: block;
+            }
+            .sp{
+                display: none;
+            }
             @media screen and (max-width:1100px){
+                .pc{
+                display: none;
+                }
+                .sp{
+                    display: block;
+                }
+                .parts-heading{
+                    padding: 0;
+                }
+                .skill{
+                    padding: 0;
+                }
                 .header-btn{
                     bottom: 5px;
                 }
@@ -537,12 +565,12 @@
                     padding-bottom: 20px;
                     max-width: none;
                 }
+                .header-nav .menus {
+                    display: none;
+                }
                 .hamburger-menu{
                     display: block;
                     position: relative;
-                }
-                .menus{
-                    display: none !important;
                 }
                 .concept-text {
                     display: block;
@@ -560,7 +588,7 @@
                     width: 80%;
                 }
                 #floating {
-                    margin: 50px auto 0 !important;
+                    margin: 50px auto 0;
                 }
                 .skill-item-upper {
                     background: -webkit-linear-gradient(top, #0784E1 0%, #F514E4 100%);
@@ -605,7 +633,7 @@
         <header>
             <div class="header-wrapper">
                 <nav class="header-nav">
-                    <h1 class="header-nav_ttl"><amp-img alt="codalistaロゴ" src="img/header-logo.png"> </h1>
+                    <h1 class="header-nav_ttl"><amp-img width="200" height="37" alt="codalistaロゴ" src="img/header-logo.png"> </h1>
                     <ul class="menus">
                         <li class="menus_item"><a href="">TOP</a></li>
                         <li class="menus_item"><a href="">SERVICE</a></li>
@@ -631,13 +659,13 @@
                     <a class="off" href="">詳細チェック</a>
                     <a class="on" href="">instagramへ</a>
                 </div>
-            </div>
-            <div class="arrow">
-                <div class="blinking">
-                    <amp-img class="pointer" src="img/point.png">
-                    <p>scroll</p>
-                </div>
-                <amp-img src="img/arrow.png">
+                <div class="arrow">
+                    <div class="blinking">
+                        <amp-img  height="24" width="54" class="pointer" src="img/point.png"></amp-img>
+                        <p>scroll</p>
+                    </div>
+                    <amp-img height="50" width="60" src="img/arrow.png"></amp-img>
+                </div>ß
             </div>
         </header>
         <div class="allWrapper">
@@ -646,7 +674,8 @@
             <section class="parts-section">
                 <h2 class="parts-heading">Concept</h2>
                 <div class="concept-text">
-                    <amp-img class="explain" alt="codalista" src="img/concept.jpeg">
+                    <amp-img class="explain pc" width="500" height="326" alt="codalista" src="img/concept.jpeg"></amp-img>
+                    <amp-img class="explain sp" style="margin: 0 auto;" width="300" height="226" alt="codalista" src="img/concept.jpeg"></amp-img>
                     <div class="is-open name">
                         <h3>CODE ×  BARISTA</h3>
                         <p>あなたの理想を形にします。個人向けのLPサイト・HP制作を行います。自分の情報を発信したい方のお手伝い致します。一緒に自分だけのホームページを作りましょう。
@@ -660,7 +689,7 @@
                 <ul class="skill">
                     <li class="skill-item" id="floating">
                         <div class="skill-item-upper">
-                            <amp-img alt="wordpress" src="img/wp.png">
+                            <amp-img width="149" height="149" alt="wordpress" src="img/wp.png"></amp-img>
                         </div>
                         <div class="skill-item-bottom">
                             <h2 class="bottom-ttl">Wordpress</h2>
@@ -675,7 +704,7 @@
                     </li>
                     <li class="skill-item"  id="floating">
                         <div class="skill-item-upper">
-                            <amp-img alt="wordpress" src="img/lp.png">
+                            <amp-img width="149" height="149" alt="wordpress" src="img/lp.png"></amp-img>
                         </div>
                         <div class="skill-item-bottom">
                             <h2 class="bottom-ttl">LP</h2>
@@ -688,7 +717,7 @@
                     </li>
                     <li class="skill-item"  id="floating">
                         <div class="skill-item-upper">
-                            <amp-img alt="wordpress" src="img/code.png">
+                            <amp-img width="149" height="164" alt="wordpress" src="img/code.png"></amp-img>
                         </div>
                         <div class="skill-item-bottom">
                             <h2 class="bottom-ttl">HTML/CSS/JS</h2>
@@ -707,47 +736,47 @@
                 <ul class="sample">
                     <li class="sample-item">
                         <a href="">
-                            <amp-img alt="" src="img/sample.jpeg">
+                            <amp-img width="288" height="288" alt="記事画像" src="img/sample.jpeg"></amp-img>
                         </a>
                     </li>
                     <li class="sample-item">
                         <a href="#">
-                            <amp-img alt="" src="img/sample.jpeg">
+                            <amp-img width="288" height="288" alt="記事画像" src="img/sample.jpeg"></amp-img>
                         </a>
                     </li>
                     <li class="sample-item">
                         <a href="#">
-                            <amp-img alt="" src="img/sample.jpeg">
+                            <amp-img width="288" height="288" alt="記事画像" src="img/sample.jpeg"></amp-img>
                         </a>
                     </li>
                     <li class="sample-item">
                         <a href="#">
-                            <amp-img alt="" src="img/sample.jpeg">
+                            <amp-img width="288" height="288" alt="記事画像" src="img/sample.jpeg"></amp-img>
                         </a>
                     </li>
                     <li class="sample-item">
                         <a href="#">
-                            <amp-img alt="" src="img/sample.jpeg">
+                            <amp-img width="288" height="288" alt="記事画像" src="img/sample.jpeg"></amp-img>
                         </a>
                     </li>
                     <li class="sample-item">
                         <a href="#">
-                            <amp-img alt="" src="img/sample.jpeg">
+                            <amp-img width="288" height="288" alt="" src="img/sample.jpeg"></amp-img>
                         </a>
                     </li>
                     <li class="sample-item">
                         <a href="#">
-                            <amp-img alt="" src="img/sample.jpeg">
+                            <amp-img width="288" height="288" alt="" src="img/sample.jpeg"></amp-img>
                         </a>
                     </li>
                     <li class="sample-item"> 
                         <a href="#">
-                            <amp-img alt="" src="img/sample.jpeg">
+                            <amp-img width="288" height="288" alt="" src="img/sample.jpeg"></amp-img>
                         </a>
                     </li>
                     <li class="sample-item">
                         <a href="#">
-                            <amp-img alt="" src="img/sample.jpeg">
+                            <amp-img width="288" height="288" alt="" src="img/sample.jpeg"></amp-img>
                         </a>
                     </li>
                 </ul>
@@ -756,7 +785,7 @@
                 <h2 class="parts-heading">profile</h2>
                 <div class="profile">
                     <div class="profile_img">
-                        <amp-img class="profile_img_item" alt="" src="img/profile.jpeg">
+                        <amp-img width="250" height="300" class="profile_img_item" alt="" src="img/profile.jpeg"></amp-img>
                     </div>
                     <ul class="profile_content">
                         <li>出身：沖縄</li>
